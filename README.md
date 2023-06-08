@@ -13,7 +13,7 @@ This repository has the terraform/scripts/documents to setup MFA and related acc
 
 ### Setup and usage
 
-Before this module is used, a valid P1/P2 license needs to be assigned to the users in the environement.
+Before this module is used, a valid P1/P2 license needs to be assigned to the users in the environment.
 
 #### Code Location
 
