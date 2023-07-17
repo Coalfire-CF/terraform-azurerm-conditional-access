@@ -40,3 +40,33 @@ Issues should be flagged appropriately.
 - Backup Code owner: Thomas Kennedy (@tkennedy-cf)
 
 The responsibility of the code owners is to approve and Merge PR's on the repository, and generally manage and direct issue discussions.
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azuread_conditional_access_policy.default](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/conditional_access_policy) | resource |
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
