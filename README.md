@@ -51,7 +51,9 @@ No modules.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_resource_prefix"></a> [resource\_prefix](#input\_resource\_prefix) | A prefix that should be attached to the names of resources | `string` | n/a | yes |
 
 ## Outputs
 
