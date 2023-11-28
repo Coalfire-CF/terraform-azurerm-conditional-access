@@ -26,9 +26,9 @@ resource "azuread_conditional_access_policy" "default" {
   }
 
   grant_controls {
-    operator          = "AND"
-    built_in_controls = ["mfa"]
-    authentication_strength_policy_id   = "00000000-0000-0000-0000-000000000004"
+    operator                          = "AND"
+    built_in_controls                 = ["mfa"]
+    authentication_strength_policy_id = "00000000-0000-0000-0000-000000000004"
   }
 
   session_controls {
