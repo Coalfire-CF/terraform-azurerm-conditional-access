@@ -71,3 +71,16 @@ No outputs.
 ### Copyright
 
 Copyright © 2023 Coalfire Systems Inc.
+## Tree
+```
+.
+|-- CONTRIBUTING.md
+|-- LICENSE
+|-- License.md
+|-- README.md
+|-- coalfire_logo.png
+|-- conditionalAccess.tf
+|-- release-please-config.json
+|-- update-readme-tree.sh
+|-- variables.tf
+```
