@@ -74,9 +74,9 @@ Copyright © 2023 Coalfire Systems Inc.
 ## Tree
 ```
 .
+|-- CHANGELOG.md
 |-- CONTRIBUTING.md
 |-- LICENSE
-|-- License.md
 |-- README.md
 |-- coalfire_logo.png
 |-- conditionalAccess.tf
