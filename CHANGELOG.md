@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.3](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v1.1.2...v1.1.3) (2026-08-20)
+
+
+### Miscellaneous
+
+* adopt Actions v0.12.1 (bypass auto-merge + event-driven re-merge) ([945793c](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/945793cf5033b5d18160f09d3241b94bdee680b8))
+* **ci:** adopt Coalfire-CF/Actions v0.11.3 ([#118](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/118)) ([192f9a3](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/192f9a336c36d66cfda3c474dc718d8590efcca3))
+* **deps:** bump the org-actions group across 1 directory with 7 updates ([#131](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/131)) ([39cc95f](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/39cc95f5555f3576ad2f2efc32a6656b834355d7))
+* **deps:** bump the org-actions group with 7 updates ([#120](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/120)) ([d692272](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/d692272df7d5b93f01c85339e19ff86162c032cc))
+* **deps:** bump the org-actions group with 7 updates ([#126](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/126)) ([9c952d5](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/9c952d50c8b5701dafaabd7a013b10e62b977de3))
+* **deps:** bump the org-actions group with 8 updates ([#121](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/121)) ([fa2d954](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/fa2d95436813a5d335f2f6871f29926cccb8131e))
+* **deps:** bump the org-actions group with 8 updates ([#122](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/122)) ([ee83aec](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/ee83aec4bdb801375606a5ffb3833176dfedec48))
+* **deps:** bump the org-actions group with 8 updates ([#123](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/123)) ([8ac96ae](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/8ac96ae54186efa4eddd9dbfa30bfd59c5ad8c51))
+* **docs:** generate README from _header.md and _footer.md ([#129](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/129)) ([c54966b](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/c54966bcb0aae136227e9fa821d2ba032a4c40ac))
+* refresh PR template ([#128](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/128)) ([f95aad0](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/f95aad0d3618223559c5693382708629a10749e4))
+* retire org-tree-readme ([#124](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/124)) ([a001a44](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/a001a44d3cff954da8b930e623eda3b5f92c97b7))
+
 ## [1.1.2](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v1.1.1...v1.1.2) (2026-07-03)
 
 
