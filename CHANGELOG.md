@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v1.1.3...v1.1.4) (2026-10-20)
+
+
+### Miscellaneous
+
+* **deps:** bump the org-actions group with 7 updates ([#137](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/137)) ([945286c](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/945286c2929d1db2aef0a4b0fd7a3a3b96697b73))
+
 ## [1.1.3](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v1.1.2...v1.1.3) (2026-10-20)
 
 
