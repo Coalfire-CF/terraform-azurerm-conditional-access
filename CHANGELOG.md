@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v1.1.4...v2.0.0) (2026-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* require Terraform 1.16.6 and azurerm 5.10 ([#139](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/139))
+
+### Features
+
+* require Terraform 1.16.6 and azurerm 5.10 ([#139](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/139)) ([ebab58c](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/ebab58cb680d6865fade557027810eef65395712))
+
 ## [1.1.4](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v1.1.3...v1.1.4) (2026-10-20)
 
 
