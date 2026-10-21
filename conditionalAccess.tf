@@ -1,7 +1,7 @@
-# AAD Conditional Access Policy
+# Entra ID conditional access policy
 resource "azuread_conditional_access_policy" "default" {
   display_name = "${var.resource_prefix}-conditional_access-ply"
-  state        = "enabledForReportingButNotEnforced" #change to enabled when ready
+  state        = var.state
 
   conditions {
     client_app_types    = ["browser", "mobileAppsAndDesktopClients"]
@@ -21,14 +21,15 @@ resource "azuread_conditional_access_policy" "default" {
     }
 
     users {
-      included_users = ["All"]
+      included_users  = ["All"]
+      excluded_users  = var.excluded_users
+      excluded_groups = var.excluded_groups
     }
   }
 
   grant_controls {
     operator                          = "AND"
-    built_in_controls                 = ["mfa"]
-    authentication_strength_policy_id = "00000000-0000-0000-0000-000000000004"
+    authentication_strength_policy_id = var.authentication_strength_policy_id
   }
 
   session_controls {

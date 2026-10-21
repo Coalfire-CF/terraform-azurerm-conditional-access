@@ -6,37 +6,50 @@
 
 ## Description
 
-This module has the terraform to setup MFA and related access controls for FedRAMP Moderate. It is used in the [Coalfire-Azure-RAMPpak](https://github.com/Coalfire-CF/Coalfire-Azure-RAMPpak) FedRAMP Framework.
+This module creates one Entra ID conditional access policy. The policy applies to all users and all applications, but only to sign-ins where both the sign-in risk and the user risk are `medium`. It does not cover low-risk or high-risk sign-ins. When it applies, it requires an authentication strength (phishing-resistant MFA by default) and a 4-hour sign-in frequency. It starts in report-only mode.
+
+It is used in the [Coalfire-Azure-RAMPpak](https://github.com/Coalfire-CF/Coalfire-Azure-RAMPpak) FedRAMP Framework.
 
 Learn more at [Coalfire OpenSource](https://coalfire.com/opensource).
 
 ## Dependencies
 
-- Before this module is used, a valid P1/P2 license needs to be assigned to the users in the environment.
+- Microsoft Entra ID P1 for conditional access.
+- Microsoft Entra ID P2 for the sign-in risk and user risk conditions.
+- Microsoft Defender for Cloud Apps for `cloud_app_security_policy = "monitorOnly"`.
+- The identity that runs Terraform needs the `Policy.ReadWrite.ConditionalAccess` and `Policy.Read.All` application roles, or the `Conditional Access Administrator` directory role.
+- Users must register methods that meet the chosen authentication strength before you set `state = "enabled"`.
 
-## Deployment Steps
+## Usage
 
-This module can be called as outlined below.
+```hcl
+module "conditional_access" {
+  source = "git::https://github.com/Coalfire-CF/terraform-azurerm-conditional-access?ref=v2.0.0"
 
-- Change directories to the `reponame` directory.
-- From the `terraform/azure/reponame` directory run `terraform init`.
-- Run `terraform plan` to review the resources being created.
-- If everything looks correct in the plan output, run `terraform apply`.
+  resource_prefix = "prod"
+  excluded_groups = ["<break-glass group object ID>"]
+}
+```
 
-#### Code Location
+See [examples/default](examples/default) for a complete root.
 
-Code should be stored in terraform/mgmt/conditionalAccess
+- The policy starts in report-only mode (`enabledForReportingButNotEnforced`).
+- `state = "enabled"` needs at least one break-glass user or group in `excluded_users` or `excluded_groups`. The policy targets all users, so an enabled policy with no exclusion can lock out every administrator.
+- Azure Government callers set `environment = "usgovernment"` on the azuread provider, or `usgovernmentl5` for DoD tenants.
 
 <!-- markdownlint-disable MD033 MD034 MD060 -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.16.6, < 2.0 |
+| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | ~> 3.10 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | n/a |
+| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | ~> 3.10 |
 
 ## Modules
 
@@ -52,7 +65,11 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_authentication_strength_policy_id"></a> [authentication\_strength\_policy\_id](#input\_authentication\_strength\_policy\_id) | Authentication strength the policy requires, in the form /policies/authenticationStrengthPolicies/<id>. Defaults to the built-in phishing-resistant MFA strength. | `string` | `"/policies/authenticationStrengthPolicies/00000000-0000-0000-0000-000000000004"` | no |
+| <a name="input_excluded_groups"></a> [excluded\_groups](#input\_excluded\_groups) | Object IDs of groups excluded from the policy, such as a group holding emergency access (break-glass) accounts. | `list(string)` | `[]` | no |
+| <a name="input_excluded_users"></a> [excluded\_users](#input\_excluded\_users) | Object IDs of users excluded from the policy, such as emergency access (break-glass) accounts. | `list(string)` | `[]` | no |
 | <a name="input_resource_prefix"></a> [resource\_prefix](#input\_resource\_prefix) | A prefix that should be attached to the names of resources | `string` | n/a | yes |
+| <a name="input_state"></a> [state](#input\_state) | Policy state. One of enabledForReportingButNotEnforced (default, report only), enabled or disabled. Setting enabled requires at least one excluded\_users or excluded\_groups entry for break-glass access. | `string` | `"enabledForReportingButNotEnforced"` | no |
 
 ## Outputs
 
