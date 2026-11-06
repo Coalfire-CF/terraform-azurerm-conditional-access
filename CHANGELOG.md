@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v2.0.0...v2.0.1) (2026-11-06)
+
+
+### Documentation
+
+* wrap Markdown lines at 120 characters (Coalfire-CF/Actions[#375](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/375)) ([#142](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/issues/142)) ([f79226c](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/commit/f79226c0b61317d5661363621192256170fbe677))
+
 ## [2.0.0](https://github.com/Coalfire-CF/terraform-azurerm-conditional-access/compare/v1.1.4...v2.0.0) (2026-10-21)
 
 
